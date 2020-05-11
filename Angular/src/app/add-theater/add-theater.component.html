@@ -1,0 +1,31 @@
+
+<h3>Create Theater</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+      <label for="name">Theater Name</label>
+      <input type="text" class="form-control" id="theaterName" required [(ngModel)]="Theater.theaterName" name="theaterName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Theater City</label>
+      <input type="text" class="form-control" id="theaterCity" required [(ngModel)]="Theater.theaterCity" name="theaterCity">
+    </div>
+    <div class="form-group">
+      <label for="name">Manager Name</label>
+      <input type="text" class="form-control" id="managerName" required [(ngModel)]="Theater.managerName" name="managerName">
+    </div>
+    <div class="form-group">
+      <label for="name">Manager Contact</label>
+      <input type="text" class="form-control" id="managerContact" required [(ngModel)]="Theater.managerContact" name="managerContact">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newTheater()">Add</button> -->
+</div>

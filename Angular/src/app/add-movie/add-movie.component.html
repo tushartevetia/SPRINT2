@@ -1,0 +1,39 @@
+<h3>Create Movie</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+      <label for="name">Movie Name</label>
+      <input type="text" class="form-control" id="movieName" required [(ngModel)]="Movie.movieName" name="movieName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Movie Genre</label>
+      <input type="text" class="form-control" id="movieGenre" required [(ngModel)]="Movie.movieGenre" name="movieGenre">
+    </div>
+    <div class="form-group">
+      <label for="name">Movie Director</label>
+      <input type="text" class="form-control" id="movieDirector" required [(ngModel)]="Movie.movieDirector" name="movieDirector">
+    </div>
+    <div class="form-group">
+      <label for="name">Movie Length</label>
+      <input type="text" class="form-control" id="movieLength" required [(ngModel)]="Movie.movieLength" name="movieLength">
+    </div>
+    <div class="form-group">
+        <label for="name">Movie Language</label>
+        <input type="text" class="form-control" id="languages" required [(ngModel)]="Movie.languages" name="languages">
+      </div>
+     <div class="form-group">
+        <label for="name">Movie Release Date</label>
+        <input type="text" class="form-control" id="movieReleaseDate" required [(ngModel)]="Movie.movieReleaseDate" name="movieReleaseDate">
+      </div>
+      
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newTheater()">Add</button> -->
+</div>
